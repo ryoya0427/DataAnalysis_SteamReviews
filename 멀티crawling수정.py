@@ -24,7 +24,7 @@ def get_steam_reviews(app_id, cursor="*", max_reviews=None):
         "json": 1,
         "cursor": cursor,
         "filter": "all",
-        "language": "all",
+        "language": "english",
         "day_range": 9223372036854775807,
         "review_type": "all",
         "num_per_page": 100,
@@ -105,9 +105,8 @@ def get_reviews_for_multiple_games(app_ids, max_reviews=None):
 
 # 예시로 여러 게임의 리뷰 데이터를 가져오기
 app_ids = [
-    "7940", "10090", "10180", "42700", "202970", "209160",
-    "209650", "311210", "292730", "393080", "476600", "1962660", "1938090",
-    "1962663", "1985810", "1985820", "2000950", "2519060", "2933620"
-]
+    "812140"
+    ]
+#"7940", "10090", "10180", "42700", "202970", "209160","209650", "311210", "292730", "393080", "476600", "1962660", "1938090","1962663", "1985810", "1985820", "2000950", "2519060", "2933620"
 max_reviews = None
 get_reviews_for_multiple_games(app_ids, max_reviews=max_reviews)
